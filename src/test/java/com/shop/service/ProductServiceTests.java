@@ -1,5 +1,6 @@
 package com.shop.service;
 
+import com.shop.dto.ProductDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +19,18 @@ public class ProductServiceTests {
         log.info("--------상품 목록 조회---------");
 
         productService.getProductList().forEach(productDTO -> log.info(productDTO.getName()));
+    }
+
+    @Test
+    public void testGetProduct() {
+
+        log.info("-------상품 상세 조회-------");
+
+        Long id = 1L;
+
+        ProductDTO product = productService.getProductById(id);
+
+        log.info(product.getName());
+
     }
 }

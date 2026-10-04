@@ -8,4 +8,6 @@ public interface ProductService {
 
     public List<ProductDTO> getProductList();
 
+    public ProductDTO getProductById(Long id);
+
 }

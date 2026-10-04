@@ -24,4 +24,9 @@ public class ProductServiceImpl implements ProductService {
                 .map(productVO -> modelMapper.map(productVO, ProductDTO.class))
                 .toList();
     }
+
+    @Override
+    public ProductDTO getProductById(Long id) {
+        return modelMapper.map(productMapper.selectById(id), ProductDTO.class);
+    }
 }
