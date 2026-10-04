@@ -10,4 +10,6 @@ public interface ProductMapper {
 
     public List<ProductVO> selectAll();
 
+    public ProductVO selectById(Long id);
+
 }

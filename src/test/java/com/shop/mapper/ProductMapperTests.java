@@ -28,4 +28,15 @@ public class ProductMapperTests {
             log.info(product.getFilePath());
         });
     }
+
+    @Test
+    public void testSelectOne() {
+        Long id = 1L;
+
+        ProductVO productVO = productMapper.selectById(id);
+
+        log.info("-----------상품 조회 결과-----------");
+
+        log.info(productVO.getName());
+    }
 }

@@ -7,4 +7,8 @@
     <select id="selectAll">
         select * from product_tbl
     </select>
+
+    <select id="selectById" parameterType="long">
+        select * from product_tbl where id = #{id}
+    </select>
 </mapper>
