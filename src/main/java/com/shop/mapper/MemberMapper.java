@@ -8,4 +8,6 @@ public interface MemberMapper {
 
     public void insert(MemberVO memberVO);
 
+    public MemberVO findMember(MemberVO memberVO);
+
 }

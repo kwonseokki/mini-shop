@@ -7,4 +7,8 @@
     <insert id="insert">
         insert into customer_tbl (name, email, address, pwd)  values(#{name}, #{email}, #{address}, #{pwd})
     </insert>
+
+    <select id="findMember">
+        select * from customer_tbl where email=#{email} and pwd=#{pwd}
+    </select>
 </mapper>
