@@ -13,4 +13,6 @@ public class ProductVO {
 
     private String filePath;
 
+    private Long price;
+
 }

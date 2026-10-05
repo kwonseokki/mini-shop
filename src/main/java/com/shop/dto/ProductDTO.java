@@ -13,4 +13,6 @@ public class ProductDTO {
 
     private String filePath;
 
+    private Long price;
+
 }
