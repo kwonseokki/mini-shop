@@ -1,7 +1,9 @@
 package com.shop.service;
 
+import com.shop.dto.MemberDTO;
+
 public interface MemberService {
 
-    public void login(String email, String pwd);
+    public MemberDTO login(String email, String pwd);
 
 }
