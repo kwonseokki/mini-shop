@@ -33,7 +33,7 @@ public class MemberMapperTests {
                 .address("용인시 기흥구")
                 .build();
 
-        MemberVO findMember = memberMapper.findMember(memberVO);
+        MemberVO findMember = memberMapper.findMember(memberVO.getEmail(), memberVO.getPwd());
 
         Assertions.assertNotNull(findMember);
     }
@@ -47,7 +47,7 @@ public class MemberMapperTests {
                 .address("용인시 기흥구")
                 .build();
 
-        MemberVO findMember = memberMapper.findMember(memberVO);
+        MemberVO findMember = memberMapper.findMember(memberVO.getEmail(), memberVO.getPwd());
 
         Assertions.assertNull(findMember);
     }
