@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{/layout/layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${product.name}"></p>
+<div layout:fragment="content">
+  <div class="container">
+   <div class="row">
+     <div class="col-md-6">
+       <img th:src="${product.filePath}" class="img-fluid" th:alt="${product.name}"/>
+     </div>
+     <div class="col-md-6">
+       <h3 th:text="${product.name}"></h3>
+       <p th:text="${product.description}"></p>
+       <p th:text="${#numbers.formatInteger(product.price, 0, 'COMMA') + '원'}" class="text-danger fw-semibold"></p>
+       <button type="button" class="btn btn-primary">주문하기</button>
+       <button type="button" class="btn btn-outline-primary">장바구니 추가</button>
+     </div>
+   </div>
+  </div>
+</div>
+</body>
+</html>

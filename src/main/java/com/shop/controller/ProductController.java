@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -23,5 +24,14 @@ public class ProductController {
         model.addAttribute("productList" ,productList);
 
         return "product/list";
+    }
+
+    @RequestMapping("/detail")
+    public String getProduct(Model model, @RequestParam("id") Long id) {
+        ProductDTO product = productService.getProductById(id);
+
+        model.addAttribute("product", product);
+
+        return "product/detail";
     }
 }
