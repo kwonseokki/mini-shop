@@ -27,6 +27,12 @@
     </div>
   </div>
 </div>
+  <script th:inline="javascript">
+    var msg = [[${msg}]]
+    if (msg != null) {
+      alert(msg)
+    }
+  </script>
 </div>
 </body>
 </html>

@@ -2,6 +2,8 @@ package com.shop.controller;
 
 import com.shop.dto.MemberDTO;
 import com.shop.service.MemberService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -25,7 +27,7 @@ public class MemberController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam("email") String email, @RequestParam("pwd") String pwd, RedirectAttributes redirectAttributes) {
+    public String login(@RequestParam("email") String email, @RequestParam("pwd") String pwd, RedirectAttributes redirectAttributes, HttpServletRequest request) {
 
         MemberDTO memberDTO = memberService.login(email, pwd);
 
@@ -33,6 +35,10 @@ public class MemberController {
             redirectAttributes.addFlashAttribute("message", "아이디 또는 비밀번호가 일치하지 않습니다.");
             return "redirect:/member/login";
         }
+
+        HttpSession session = request.getSession();
+        session.setAttribute("loginMember", memberDTO);
+        redirectAttributes.addFlashAttribute("msg", memberDTO.getName() + "님 로그인 되었습니다.");
 
         return "redirect:/product/list";
     }
