@@ -5,7 +5,7 @@
 
 <mapper namespace="com.shop.mapper.CartMapper">
     <insert id="insert" parameterType="com.shop.vo.CartVO">
-        insert into cart_tbl (customer_id, product_id, quantity) values(#{customerId}, #{productId}, 1)
+        insert into cart_tbl (customer_id, product_id, quantity) values(#{memberId}, #{productId}, 1)
     </insert>
 
     <delete id="delete" parameterType="long">

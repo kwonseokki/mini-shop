@@ -29,7 +29,7 @@ public class CartMapperTests {
         MemberVO memberVO = memberMapper.findMember("test@test.com", "1234");
 
         CartVO cartVO = CartVO.builder()
-                .customerId(memberVO.getId())
+                .memberId(memberVO.getId())
                 .productId(productList.get(1).getId())
                 .build();
 

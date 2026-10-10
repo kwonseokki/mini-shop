@@ -1,10 +1,14 @@
 package com.shop.vo;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class CartVO {
 
     public Long id;
@@ -13,6 +17,6 @@ public class CartVO {
 
     public Long productId;
 
-    public Long customerId;
+    public Long memberId;
 
 }
