@@ -33,4 +33,11 @@ public class CartMapperTests {
 
         cartMapper.insert(cartVO);
     }
+
+    @Test
+    public void testDelete() {
+        Long id = 1L;
+
+        cartMapper.delete(id);
+    }
 }

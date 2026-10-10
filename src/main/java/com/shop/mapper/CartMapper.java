@@ -7,4 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 public interface CartMapper {
 
     public void insert(CartVO cartVO);
+
+    public void delete(Long id);
+
 }
