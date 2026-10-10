@@ -11,4 +11,12 @@
     <delete id="delete" parameterType="long">
         delete from cart_tbl where id = #{id}
     </delete>
+
+    <select id="selectAll" parameterType="long" resultType="com.shop.vo.ProductVO">
+        select p.*
+        from cart_tbl c
+        join product_tbl p
+        on c.product_id = p.id
+        where customer_id = #{memberId};
+    </select>
 </mapper>
