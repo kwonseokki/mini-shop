@@ -2,6 +2,7 @@ package com.shop.service;
 
 import com.shop.dto.ProductDTO;
 import com.shop.mapper.ProductMapper;
+import com.shop.service.interfaces.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

@@ -2,6 +2,7 @@ package com.shop.service;
 
 import com.shop.dto.MemberDTO;
 import com.shop.mapper.MemberMapper;
+import com.shop.service.interfaces.MemberService;
 import com.shop.vo.MemberVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

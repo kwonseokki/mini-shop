@@ -1,7 +1,7 @@
 package com.shop.controller;
 
 import com.shop.dto.ProductDTO;
-import com.shop.service.ProductService;
+import com.shop.service.interfaces.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

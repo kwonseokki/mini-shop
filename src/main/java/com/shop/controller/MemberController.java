@@ -1,7 +1,7 @@
 package com.shop.controller;
 
 import com.shop.dto.MemberDTO;
-import com.shop.service.MemberService;
+import com.shop.service.interfaces.MemberService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
