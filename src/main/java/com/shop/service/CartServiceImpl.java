@@ -1,5 +1,6 @@
 package com.shop.service;
 
+import com.shop.dto.CartDTO;
 import com.shop.dto.ProductDTO;
 import com.shop.mapper.CartMapper;
 import com.shop.service.interfaces.CartService;
@@ -15,17 +16,17 @@ public class CartServiceImpl implements CartService {
     private final CartMapper cartMapper;
 
     @Override
-    public void addCart() {
+    public void addCart(CartDTO cartDTO) {
 
     }
 
     @Override
-    public void removeCart() {
+    public void removeCart(Long id) {
 
     }
 
     @Override
-    public List<ProductDTO> getCartList() {
+    public List<ProductDTO> getCartList(Long memberId) {
         return List.of();
     }
 }
